@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="background.js" defer></script>
+    <script src="tiltingcontainers" defer></script>
+</head>
+<body>
+    <canvas id="backgroundCanvas"></canvas>
+    <nav class="vertical-nav">
+        <div class="nav-item" data-section="0">
+            <img src="svgs/home.svg" alt="Home" width="25" height="25">
+        </div>
+        <div class="nav-item" data-section="1">
+            <img src="svgs/projects.svg" alt="Projects" width="25" height="25">
+        </div>
+        <div class="nav-item" data-section="2">
+            <img src="svgs/skills.svg" alt="Skills" width="25" height="25">
+        </div>
+        <div class="nav-item" data-section="3">
+            <img src="svgs/about.svg" alt="About" width="25" height="25">
+        </div>
+        <div class="nav-item" data-section="4">
+            <img src="svgs/contact.svg" alt="Contact" width="25" height="25">
+        </div>
+    </nav>
+    <div class="section" id="home">
+        <h1>Mikko Parkkonen</h1>
+        <span>Scroll down</span>
+        <p>↓</p>
+    </div>
+    <div class="section" id="projects">
+        <h2>Projektit</h2>
+        <p>Githubista löytyy suurin osa projekteistani</p>
+        <a href="https://github.com/Mikko-P"><img src="svgs/github-mark-white.svg"></img></a>
+        <a href="projects.html">Katso niitä myös tältä sivulta</a>
+    </div>
+    <div class="section" id="experience">
+        <h2>Työkalut</h2>
+        <div class="container">
+            <ul>
+                <li>C++</li>
+                <li>JavaScript</li>
+                <li>jQuery</li>
+            </ul>
+            <ul>
+                <li>Linux</li>
+                <li>Windows</li>
+                <li>Node</li>
+            </ul>
+        </div>
+        <div class="container">
+            <ul>
+                <li>Photoshop</li>
+                <li>Illustator</li>
+                <li>Figma</li>
+            </ul>
+            <ul>
+                <li>Git</li>
+                <li>MongoDB</li>
+                <li>SQL</li>
+            </ul>
+        </div>
+    </div>
+    <div class="section" id="about">
+        <h2>Minusta</h2>
+        <p>Olen ohjelmistokehittäjä Lahdesta, joka haluaa haastaa itseään erilaisilla pulmilla ja tehtävillä.</p>
+        <p>Aloitin ohjelmoinnin ensimmäistä kertaa itsenäisesti ilmoittumalla koulun atk kursille. Tiesin, että homma ei olisi aina helppoa, mutta jokaisesta vastaan tulleesta ongelmasta on silti päästy yli.</p>
+        <p>Opiskelen koulutuskeskus Salpauskessa ohjelmistokehittäjäksi. Olen oppinut Salpauksella paljon joukossa kehittämisestä ja millaista on työskennellä asiakkaiden kanssa.</p>
+    </div>
+    <div class="section" id="contact">
+        <h2>Yhteydenotto</h2>
+        <p>Minut saa helposti kiinni viestillä/sähköpostilla</p>
+        <span>parkkonenmikko@proton.me</span>
+    </div>
+</body>
+</html>
