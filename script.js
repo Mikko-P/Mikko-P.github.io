@@ -70,6 +70,28 @@ function handleTouchSwipe() {
     });
 }
 
+function handleKeyNavigation(e) {
+    if (isScrolling || isZooming) return;
+    switch (e.key) {
+        case "ArrowUp":
+        case "ArrowLeft":
+            if (currentSection > 0) {
+                currentSection--;
+                scrollToSection(currentSection);
+            }
+            break;
+        case "ArrowDown":
+        case "ArrowRight":
+            if (currentSection < sections.length - 1) {
+                currentSection++;
+                scrollToSection(currentSection);
+            }
+            break;
+        default:
+            break;
+    }
+}
+
 window.addEventListener("resize", () => {
     clearTimeout(zoomTimeout);
     isZooming = true;
@@ -79,11 +101,11 @@ window.addEventListener("resize", () => {
     }, 200);
 });
 
-window.addEventListener("wheel", handleScroll, {
-    passive: false
-});
+window.addEventListener("wheel", handleScroll, { passive: false });
+window.addEventListener("keydown", handleKeyNavigation);
 
 handleTouchSwipe();
+
 navItems.forEach((item, index) => {
     item.addEventListener("click", () => {
         currentSection = index;
