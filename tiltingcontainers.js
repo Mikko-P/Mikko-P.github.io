@@ -1,4 +1,5 @@
 const containers = document.querySelectorAll('.container');
+const toolsPanel = document.getElementById("tools");
 const screenCenterX = window.innerWidth / 2;
 const screenCenterY = window.innerHeight / 2;
 let isTouchscreen = false;
@@ -11,7 +12,7 @@ window.addEventListener("wheel", (e) => {
     isTouchscreen = false;
 });
 
-window.addEventListener('mousemove', (e) => {
+toolsPanel.addEventListener('mousemove', (e) => {
     if (isTouchscreen)
         return;
     const mouseX = e.clientX;
